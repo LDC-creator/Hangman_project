@@ -1,6 +1,7 @@
 import random
 
 class Hangman:
+
     def __init__(self, word_list, num_lives=5):
         self.word_list = word_list
         self.word = random.choice(self.word_list)
@@ -40,7 +41,9 @@ class Hangman:
         else:
             print(f"Congratulations! You've guessed the word: {''.join(self.word_guessed)}")
 
-word_list = ["grapes", "oranges", "apples", "blueberries", "strawberries"]
-game = Hangman(word_list)
-game.play()
+
+if __name__ == "__main__":
+    word_list = ["grapes", "oranges", "apples", "blueberries", "strawberries"]
+    game = Hangman(word_list)
+    game.play()
 
